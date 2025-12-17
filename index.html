@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Unathi Studios — Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      max-width: 720px;
+      margin: 10vh auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #111827;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    h1 { margin-top: 0; }
+    .muted { color: #6b7280; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Unathi Studios Ltd</h1>
+    <p class="muted">Coming soon.</p>
+
+    <p>
+      We are a software and digital product studio building mobile applications
+      focused on mindfulness, wellbeing, and personal development.
+    </p>
+
+    <p>
+      Our products are currently in development and will be released soon via app
+      stores and online platforms.
+    </p>
+
+    <p>
+      <strong>Contact:</strong>
+      <a href="#" id="email-link">Email us</a>
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      const user = "hello";
+      const domain = "unathistudios.com";
+      const email = user + "@" + domain;
+
+      const link = document.getElementById("email-link");
+      link.href = "mailto:" + email;
+      link.textContent = email;
+    })();
+  </script>
+</body>
+</html>
