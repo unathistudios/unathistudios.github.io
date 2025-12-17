@@ -4,31 +4,88 @@
   <meta charset="utf-8" />
   <title>Unathi Studios — Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Inter font only -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #000000;
+      --fg: #f5f5f5;
+      --muted: #9ca3af;
+      --accent: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      max-width: 720px;
-      margin: 10vh auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      background: #ffffff;
-      color: #111827;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', system-ui, sans-serif;
+      letter-spacing: -0.01em;
     }
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 24px;
+
+    .wrap {
+      max-width: 860px;
+      padding: 48px 32px;
     }
-    h1 { margin-top: 0; }
-    .muted { color: #6b7280; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 800;
+      margin: 0 0 12px;
+    }
+
+    .tag {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    p {
+      font-size: 1.25rem;
+      max-width: 640px;
+      margin: 0 0 20px;
+      font-weight: 400;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .cta a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.6);
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
+  <div class="wrap">
     <h1>Unathi Studios Ltd</h1>
-    <p class="muted">Coming soon.</p>
+    <div class="tag">Coming soon</div>
 
     <p>
       We are a software and digital product studio building mobile applications
@@ -40,10 +97,9 @@
       stores and online platforms.
     </p>
 
-    <p>
-      <strong>Contact:</strong>
-      <a href="#" id="email-link">Email us</a>
-    </p>
+    <div class="cta">
+      <a href="#" id="email-link">Contact us</a>
+    </div>
   </div>
 
   <script>
@@ -54,7 +110,6 @@
 
       const link = document.getElementById("email-link");
       link.href = "mailto:" + email;
-      link.textContent = email;
     })();
   </script>
 </body>
